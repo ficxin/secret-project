@@ -49,7 +49,8 @@ class Carousel extends Component {
   }
 
   prevSlide = () => {
-    const { index: prev, positions } = this.state;
+    const { index: prev, positions, disableClick } = this.state;
+    if (disableClick) return;
     const index = prev - 1;
     const dist = -positions[index];
 
@@ -82,11 +83,15 @@ class Carousel extends Component {
                 <a
                   className="nav-button prev-slide"
                   onClick={() => this.prevSlide()}>
+                    <span>&#9001;</span>
                 </a>
-              </div> : null}
+              </div> 
+            : null}
             <div>
-              <a className="nav-button next-slide"
+              <a 
+                className="nav-button next-slide"
                 onClick={() => this.nextSlide()}>
+                  <span>&#9002;</span>
               </a>
             </div>
           </div>
@@ -99,6 +104,7 @@ class Carousel extends Component {
                   className='thumbnail'
                   src={thumbnail_url}
                   alt={name}
+                  onClick={() => true}
                 />
               </li>
             ))}

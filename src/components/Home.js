@@ -21,7 +21,7 @@ class Home extends Component {
     return (
       <React.Fragment>
         <header>mirum gallery</header>
-        <Carousel artists={artists} />
+        <Carousel artists={artists}/>
       </React.Fragment>
     );
   }

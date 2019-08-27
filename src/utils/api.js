@@ -6,7 +6,7 @@ const featuredArtist = [
   { name: 'Daniel Arsham',
     thumbnail_url: 'https://images.squarespace-cdn.com/content/596e2ce46b8f5b88b9f39254/1548861264496-EX87LBS8QGPS4FZ5LWW8/Daniel+Arsham%2C+Blue+Calcite+National+Geographic+Magazine%2C+Blue+calcite%2C+hydrostone%2C+36%2C8+x+25%2C7+x+5%2C1+cm%2C+2018.jpg?content-type=image%2Fjpeg' },
   { name: 'Christina Paik',
-    thumbnail_url: 'https://format-com-cld-res.cloudinary.com/image/private/s--yOQZL1Kt--/c_limit,g_center,h_65535,w_150/a_auto,fl_keep_iptc.progressive,q_95/58258-3410909-w11_you_cpaik.jpg?150' },
+    thumbnail_url: 'https://format-com-cld-res.cloudinary.com/image/private/s--TVkDXEDD--/c_limit,g_center,h_65535,w_2500/a_auto,fl_keep_iptc.progressive,q_95/58258-3410909-w11_you_cpaik.jpg?1501' },
   { name: 'Takashi Murakami',
     thumbnail_url: 'https://www.thebroad.org/sites/default/files/art/murakami_of_chinese_lions.jpg' }
 ]

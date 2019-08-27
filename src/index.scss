@@ -49,13 +49,30 @@ header {
         top: 50%;
         transform: translateY(-50%);
         background-color: #000;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
 
         &.prev-slide {
           margin-left: 1rem;
+          span {
+            left: 0;
+          }
         }
         &.next-slide {
           margin-right: 1rem;
           right: 0;
+          span {
+            right: 0;
+          }
+        }
+
+        span {
+          position: absolute;
+          text-align: center;
+          color: white;
+          font-size: 30px;
+          padding: 6px 4px;
         }
       }
     }
@@ -73,6 +90,7 @@ header {
       list-style: none;
       transition-duration: 300ms;
       transition-timing-function: ease-in-out;
+      will-change: transform;
       
       .slide {
         padding-left: 1rem;
