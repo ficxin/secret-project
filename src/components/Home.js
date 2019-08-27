@@ -1,14 +1,28 @@
 import React, { Component } from 'react';
-import '../App.css';
+import Carousel from './Carousel';
+import { getFeaturedArtists } from '../utils/api'
 
 class Home extends Component {
+  state = {
+    artists: []
+  }
+  
+  componentDidMount() {
+    const featuredArtists = getFeaturedArtists();
+    this.setFeaturedArtists(featuredArtists);
+  }
+
+  setFeaturedArtists = (artists) => {
+    this.setState(() => ({ artists }));
+  }
+
   render () {
+    const { artists } = this.state
     return (
-      <div className='home-container'>
-        <header>james jean</header>
-        <main>
-        </main>
-      </div>
+      <React.Fragment>
+        <header>mirum gallery</header>
+        <Carousel artists={artists} />
+      </React.Fragment>
     );
   }
 }
