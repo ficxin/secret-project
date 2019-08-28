@@ -60,7 +60,7 @@ header {
           }
         }
         &.next-slide {
-          margin-right: 1rem;
+          margin-right: 3rem;
           right: 0;
           span {
             right: 0;
@@ -146,9 +146,18 @@ header {
 
       .display-item {
         display: inline-block;
+
         img {
+          opacity: 0.3;
+          transition-property: opacity;
+          transition-duration: 200ms;
+          transition-timing-function: ease-in;
           height: 150px;
           padding: 0 4px;
+
+          &:hover {
+            opacity: 0.6;
+          }
         }
       }
     }

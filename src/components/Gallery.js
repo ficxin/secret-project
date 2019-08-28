@@ -6,6 +6,7 @@ class Display extends Component {
   state = {
     image_urls: [],
     artist_bio: '',
+    mainImageIndex: 0,
   }
   
   componentDidMount() {
@@ -18,9 +19,15 @@ class Display extends Component {
     }));
   }
 
+  updateMainImage = (mainImageIndex) => {
+    this.setState(() => ({ 
+      mainImageIndex
+    }));
+  }
+
   render () {
     const { match } = this.props;
-    const { image_urls, name } = this.state;
+    const { image_urls, name, mainImageIndex} = this.state;
 
     return (
       <React.Fragment>
@@ -29,8 +36,7 @@ class Display extends Component {
           <section className='display-container'>
             <div className='display-main'>
               <img
-                className='thumbnail'
-                src={image_urls[0]}
+                src={image_urls[mainImageIndex]}
                 alt={match.params.id}
               />
             </div>
@@ -39,9 +45,10 @@ class Display extends Component {
                 {image_urls.map((image_url, i) => (
                   <li key={i} className='display-item'>
                     <img
-                      className='thumbnail'
                       src={image_url}
                       alt={`${match.params.id}${i}`}
+                      onClick={() => this.updateMainImage(i)}
+                      style={i === mainImageIndex ? { opacity: 1} : null}
                     />
                   </li>
                 ))}
