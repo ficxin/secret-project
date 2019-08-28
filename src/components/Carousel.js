@@ -11,7 +11,8 @@ class Carousel extends Component {
 
   componentDidMount() {
     const carousel = document.querySelector('.carousel')
-    carousel.addEventListener('transitionend', this.handleTransitionEnd)
+    carousel.addEventListener('transitionend', this.handleTransitionEnd, false);
+    window.addEventListener('resize', this.resetCarousel, false);
 
     this.setState(() => ({ 
       carousel,
@@ -21,8 +22,13 @@ class Carousel extends Component {
   componentDidUpdate(prevProp, prevState) {
     if (!prevState.positions) {
       // Styles are not applied until current callstack is completed and delay is required to read correct styles.
-      setTimeout(() => this.getSlidePositions(), 100)
+      setTimeout(() => this.getSlidePositions(), 100);
     }
+  }
+
+  componentWillUnmount() {
+    this.state.carousel.removeEventListener('transitionend', this.handleTransitionEnd, false);
+    window.removeEventListener('resize', this.resetCarousel, false);
   }
 
   getSlidePositions = () => {
@@ -64,12 +70,22 @@ class Carousel extends Component {
     }));
   }
 
-  handleTransitionEnd = (ev) => {
-    ev.preventDefault();
-
+  handleTransitionEnd = () => {
     this.setState(() => ({
       disableClick: false,
     }));
+  }
+
+  resetCarousel = () => {
+    const { index } = this.state;
+    const desktopBreakPoint = 768;
+    console.log(window.innerWidth)
+    if (window.innerWidth < desktopBreakPoint && index) {
+      this.setState(() => ({
+        index: 0,
+        transition: { transform: `translateX(0px)`},
+      }));
+    }
   }
 
   render () {
