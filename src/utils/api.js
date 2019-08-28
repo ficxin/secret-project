@@ -1,23 +1,23 @@
 const featuredArtist = [
   { 
     name: 'James Jean',
-    thumbnail_url: 'https://images.squarespace-cdn.com/content/v1/5484b3b4e4b0883e5fe5efa4/1502211316181-CJFOAHS24JJMGXYOH88S/ke17ZwdGBToddI8pDm48kFFKGuZY9WhzZtK-Is1d2bV7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UShpB9j3LyarxWHEbDOGstMKxENIdJPx0JALYWxsfhp_lTuxwbvehnjE3cRhZ0ICWA/joyce-fluid-finish1-webres.jpg?format=2500w'
+    thumbnail: ['https://images.squarespace-cdn.com/content/v1/5484b3b4e4b0883e5fe5efa4/1502211316181-CJFOAHS24JJMGXYOH88S/ke17ZwdGBToddI8pDm48kFFKGuZY9WhzZtK-Is1d2bV7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UShpB9j3LyarxWHEbDOGstMKxENIdJPx0JALYWxsfhp_lTuxwbvehnjE3cRhZ0ICWA/joyce-fluid-finish1-webres.jpg?format=2500w', 'Pistil and Stamen']
   },
   { 
     name: 'Daniel Arsham',
-    thumbnail_url: 'https://static1.squarespace.com/static/596e2ce46b8f5b88b9f39254/59a428e9cd0f681b1cb9b7da/5bad4f564785d3b8b926d5f1/1539187048404/3018_thumbnail.jpg?format=2500w'
+    thumbnail: ['https://static1.squarespace.com/static/596e2ce46b8f5b88b9f39254/59a428e9cd0f681b1cb9b7da/5bad4f564785d3b8b926d5f1/1539187048404/3018_thumbnail.jpg?format=2500w', 'Relics From the Future 3018']
   },
   { 
     name: 'Andy Dixon',
-    thumbnail_url: 'http://www.andydixon.net/content/1-work/5-how-much-do-they-cost/patronshome.jpg',
+    thumbnail: ['http://www.andydixon.net/content/1-work/5-how-much-do-they-cost/patronshome.jpg', 'Drawing Room'],
   },
   { 
     name: 'Takashi Murakami',
-    thumbnail_url: 'https://www.thebroad.org/sites/default/files/art/murakami_of_chinese_lions.jpg' 
+    thumbnail: ['https://www.thebroad.org/sites/default/files/art/murakami_of_chinese_lions.jpg', 'Of Chinese Lions, Peonies, Skulls, and Fountains'] 
   },
   { 
     name: 'Christina Paik',
-    thumbnail_url: 'https://format-com-cld-res.cloudinary.com/image/private/s--TVkDXEDD--/c_limit,g_center,h_65535,w_2500/a_auto,fl_keep_iptc.progressive,q_95/58258-3410909-w11_you_cpaik.jpg?1501'
+    thumbnail: ['https://format-com-cld-res.cloudinary.com/image/private/s--TVkDXEDD--/c_limit,g_center,h_65535,w_2500/a_auto,fl_keep_iptc.progressive,q_95/58258-3410909-w11_you_cpaik.jpg?1501', 'You']
   }
 ]
 

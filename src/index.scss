@@ -14,12 +14,20 @@ html, body, #root, .App {
   height: 100%;
   width: 100%;
   margin: 0;
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
 }
 
 header {
-  font-size: 2.4em;
+  font-family: Suisse-Medium, sans-serif;
   text-transform: uppercase;
   z-index: 1000;
+  padding: 0.4rem 0.2rem;
+  font-size: 2.8em;
 }
 
 .carousel-wrapper {
@@ -42,7 +50,6 @@ header {
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
-      overflow: hidden;
       list-style: none;
 
       .slide {
@@ -52,6 +59,23 @@ header {
           max-width: 100%;
           height: auto;
           position: static;
+        }
+        .exhibit-info {
+          font-size: 0.9em;
+          position: relative;
+          color: #5e5e5e;
+          margin: 1rem 1rem 2rem;
+
+          .artist-name {
+            font-size: 1.2em;
+            margin: 0;
+            text-transform: uppercase;
+          }
+          .exhibit-name {
+            font-size: 0.9em;
+            margin: 0;
+            padding-top: 0.5rem;
+          }
         }
       }
     }
@@ -63,7 +87,7 @@ header {
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
   
   .display-container {
     height: 100%;
@@ -128,7 +152,7 @@ header {
     position: absolute;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     padding-left: 2rem;
     display: flex;
     flex-direction: column;
@@ -136,7 +160,6 @@ header {
     box-sizing: border-box;
     
     .carousel-container {
-      overflow: hidden;
   
       .carousel-nav {
         display: block;
@@ -186,7 +209,6 @@ header {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        overflow: hidden;
         list-style: none;
         transition-duration: 300ms;
         transition-timing-function: ease-in-out;
@@ -201,6 +223,16 @@ header {
             height: 500px;
             background-size: cover;
           }
+
+          .exhibit-info {
+            font-size: 1em;
+            position: absolute;
+            margin: 0;
+
+            .artist-name {
+              padding-top: 0.5rem;
+            }
+          }
         }
       }
     }
@@ -211,7 +243,7 @@ header {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-x: hidden;
     
     .display-container {
       height: 100%;

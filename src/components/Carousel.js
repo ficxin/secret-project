@@ -116,8 +116,9 @@ class Carousel extends Component {
           <ul 
             className='carousel'
             style={transition}>
-            {artists.map(({ name, thumbnail_url }) => {
+            {artists.map(({ name, thumbnail }) => {
               const path = name.replace(/\s/g, '').toLowerCase();
+              const [thumbnail_url, exhibit] = thumbnail
               return (
                 <li key={name} className='slide'>
                   <Link to={`/gallery/${path}`}>
@@ -127,6 +128,10 @@ class Carousel extends Component {
                       alt={name}
                     />
                   </Link>
+                  <div className='exhibit-info'>
+                    <p className='artist-name'>{name}</p>
+                    <p className='exhibit-name'>{exhibit}</p>
+                  </div>
                 </li>
               )}
             )}
