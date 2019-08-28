@@ -105,3 +105,52 @@ header {
   }
 }
 
+.display-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  
+  .display-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    box-sizing: border-box;
+    
+    .display-main {
+      height: 70vh;
+      
+      img {
+        max-height: 100%;
+        background-size: contain;
+        background-position: center;
+      }
+    }
+
+    .display-selector {
+      width: 100%;
+    }
+
+    .display-collection {
+      white-space: nowrap;
+      position: relative;
+      height: 150px;
+      width: fit-content;
+      padding: 0;
+      list-style: none;
+      margin: 2rem auto 0;
+
+      .display-item {
+        display: inline-block;
+        img {
+          height: 150px;
+          padding: 0 4px;
+        }
+      }
+    }
+  }
+}
+
