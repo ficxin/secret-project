@@ -10,18 +10,17 @@ class Display extends Component {
   
   componentDidMount() {
     const { match } = this.props;
-    const { image_urls, artist_bio, name }  = getArtistExhibit(match.params.id);
+    const { image_urls, name }  = getArtistExhibit(match.params.id);
 
     this.setState(() => ({ 
       image_urls,
-      artist_bio,
-      name
+      name,
     }));
   }
 
   render () {
     const { match } = this.props;
-    const { image_urls, artist_bio, name } = this.state;
+    const { image_urls, name } = this.state;
 
     return (
       <React.Fragment>
@@ -31,7 +30,7 @@ class Display extends Component {
             <div className='display-main'>
               <img
                 className='thumbnail'
-                src={image_urls[1]}
+                src={image_urls[0]}
                 alt={match.params.id}
               />
             </div>
