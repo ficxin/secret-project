@@ -36,8 +36,8 @@ const artistExhibits = {
   andydixon: {
     name: 'Andy Dixon',
     image_urls: [
-      'http://www.andydixon.net/content/1-work/1-look-at-this-stuff-isn-t-it-neat-joshua-liner-new-york-2019/andydixon-christiesgoldenagew.jpg',
       'http://www.andydixon.net/content/1-work/1-look-at-this-stuff-isn-t-it-neat-joshua-liner-new-york-2019/andydixon-christiesfiveprivatecollectionw.jpg',
+      'http://www.andydixon.net/content/1-work/1-look-at-this-stuff-isn-t-it-neat-joshua-liner-new-york-2019/andydixon-christiesgoldenagew.jpg',
       'http://www.andydixon.net/content/1-work/1-look-at-this-stuff-isn-t-it-neat-joshua-liner-new-york-2019/andydixon-christiesfaringdonhousew.jpg',
       'http://www.andydixon.net/content/1-work/2-alchemy-beers-london-2018/andydixon-patronshomebrooklyn2.jpg',
       'http://www.andydixon.net/content/1-work/3-drawing-room/andydixon-sothebys.jpg'

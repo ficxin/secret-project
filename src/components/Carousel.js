@@ -97,20 +97,16 @@ class Carousel extends Component {
         <section className='carousel-container'>
           <div className='carousel-nav'>
             {index ?
-              <div>
-                <a
-                  className='nav-button prev-slide'
-                  onClick={() => this.prevSlide()}>
-                    <span>&#9001;</span>
-                </a>
+              <div
+                className='nav-button prev-slide'
+                onClick={() => this.prevSlide()}>
+                  <span>&#9001;</span>
               </div> 
             : null}
-            <div>
-              <a 
-                className='nav-button next-slide'
-                onClick={() => this.nextSlide()}>
-                  <span>&#9002;</span>
-              </a>
+            <div
+              className='nav-button next-slide'
+              onClick={() => this.nextSlide()}>
+                <span>&#9002;</span>
             </div>
           </div>
           <ul 

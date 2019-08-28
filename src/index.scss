@@ -2,7 +2,6 @@
   font-family: Suisse-Regular;
   src: url("./assets/fonts/SuisseIntl-Regular-WebS.woff2") format("woff2"), url("./assets/fonts/SuisseIntl-Regular-WebS.woff") format("woff"), url("./assets/fonts/SuisseIntl-Regular-WebS.ttf") format("truetype")
 }
-
 @font-face {
   font-family: Suisse-Medium;
   src: url("./assets/fonts/SuisseIntl-Medium-WebS.woff2") format("woff2"), url("./assets/fonts/SuisseIntl-Medium-WebS.woff") format("woff"), url("./assets/fonts/SuisseIntl-Medium-WebS.ttf") format("truetype")
@@ -26,14 +25,12 @@ header {
   font-family: Suisse-Medium, sans-serif;
   text-transform: uppercase;
   z-index: 1000;
-  padding: 0.4rem 0.2rem;
+  padding: 0.4rem 1rem;
   font-size: 2.8em;
 }
 
 .carousel-wrapper {
   position: relative;
-  height: 100%;
-  width: 100%;
   box-sizing: border-box;
   
   .carousel-container {
@@ -42,14 +39,8 @@ header {
     }
     
     .carousel {
-      position: relative;
-      height: 100%;
-      width: fit-content;
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
       list-style: none;
 
       .slide {
@@ -60,6 +51,7 @@ header {
           height: auto;
           position: static;
         }
+
         .exhibit-info {
           font-size: 0.9em;
           position: relative;
@@ -108,7 +100,6 @@ header {
   }
 }
 
-
 @media only screen and (min-width: 768px) {
   header {
     position: fixed;
@@ -124,7 +115,6 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-sizing: border-box;
     
     .carousel-container {
   
