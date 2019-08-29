@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import { getArtistExhibit } from '../utils/api'
 
 class Display extends Component {
@@ -32,6 +32,11 @@ class Display extends Component {
     return (
       <React.Fragment>
         <header>{name}</header>
+        <Link 
+          to={'/'} 
+          className='back-button'>
+            <span>&#9001;</span>
+        </Link>
         <div className='display-wrapper'>
           <section className='display-container'>
             <div className='display-main'>

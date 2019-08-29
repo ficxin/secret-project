@@ -79,7 +79,7 @@ class Carousel extends Component {
   resetCarousel = () => {
     const { index } = this.state;
     const desktopBreakPoint = 768;
-    console.log(window.innerWidth)
+
     if (window.innerWidth < desktopBreakPoint && index) {
       this.setState(() => ({
         index: 0,
@@ -97,17 +97,17 @@ class Carousel extends Component {
         <section className='carousel-container'>
           <div className='carousel-nav'>
             {index ?
-              <div
+              <button
                 className='nav-button prev-slide'
                 onClick={() => this.prevSlide()}>
                   <span>&#9001;</span>
-              </div> 
+              </button> 
             : null}
-            <div
+            <button
               className='nav-button next-slide'
               onClick={() => this.nextSlide()}>
                 <span>&#9002;</span>
-            </div>
+            </button>
           </div>
           <ul 
             className='carousel'
