@@ -21,19 +21,27 @@ a {
   color: #222;
 }
 
-.back-button {
+.nav-button {
   position: absolute;
-  top: 0;
-  right: 0;
   height: 50px;
   width: 50px;
+  border: none;
   background-color: #222;
+  z-index: 900;
+  cursor: pointer;
 
   span {
     position: absolute;
-    color: white;
+    color: #fff;
     font-size: 30px;
     padding: 6px 4px;
+  }
+
+  &:focus { outline: 0; }
+
+  &.back-home {
+    top: 0;
+    right: 0;
   }
 }
 
@@ -45,47 +53,47 @@ header {
   font-size: 2.8em;
   max-width: 70vw;
   line-height: 1;
+  user-select: none;
 }
 
 .carousel-wrapper {
   position: relative;
   box-sizing: border-box;
   
-  .carousel-container {
-    .carousel-nav {
-      display: none;
-    }
-    
-    .carousel {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+  .carousel-nav {
+    display: none;
+  }
+  
+  .carousel {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
-      .slide {
-        display: block;
+    .slide {
+      display: block;
 
-        img {
-          max-width: 100%;
-          height: auto;
-          position: static;
+      img {
+        max-width: 100%;
+        height: auto;
+        position: static;
+      }
+
+      .exhibit-info {
+        font-size: 0.9em;
+        position: relative;
+        color: #5e5e5e;
+        margin: 1rem 1rem 2rem;
+        user-select: none;
+
+        .artist-name {
+          font-size: 1.2em;
+          margin: 0;
+          text-transform: uppercase;
         }
-
-        .exhibit-info {
+        .exhibit-name {
           font-size: 0.9em;
-          position: relative;
-          color: #5e5e5e;
-          margin: 1rem 1rem 2rem;
-
-          .artist-name {
-            font-size: 1.2em;
-            margin: 0;
-            text-transform: uppercase;
-          }
-          .exhibit-name {
-            font-size: 0.9em;
-            margin: 0;
-            padding-top: 0.5rem;
-          }
+          margin: 0;
+          padding-top: 0.5rem;
         }
       }
     }
@@ -94,50 +102,29 @@ header {
 
 .display-wrapper {
   height: 100%;
-  
-  .display-container {
-    .display-main {
-      display: none;
-    }
 
-    .display-collection {
-      padding: 0;
-      list-style: none;
-      margin: 0;
+  .display-main {
+    display: none;
+  }
 
-      .display-item {
-        display: block;
+  .display-collection {
+    padding: 0;
+    list-style: none;
+    margin: 0;
 
-        img {
-          max-width: 100%;
-          height: auto;
-          position: static;
-        }
+    .display-item {
+      display: block;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        position: static;
       }
     }
   }
 }
 
 @media only screen and (min-width: 768px) {
-
-  %button {
-    display: block;
-    position: absolute;
-    height: 50px;
-    width: 50px;
-    border: none;
-    text-align: center;
-    background-color: #222;
-  
-    &:focus { outline: 0; }
-  
-    span {
-      color: white;
-      font-size: 30px;
-      padding: 6px 4px;
-    }
-  }
-
   header {
     position: fixed;
     padding: 3rem;
@@ -145,14 +132,7 @@ header {
   }
 
   .back-button {
-    @extend %button;
-    z-index: 900;
-    right: 0;
-    top: 0;
-  
-    span {
-      left: 0;
-    }
+    span { left: 0; }
   }
   
   .carousel-wrapper {
@@ -165,66 +145,63 @@ header {
     flex-direction: column;
     justify-content: center;
     
-    .carousel-container {
-  
-      .carousel-nav {
-        display: block;
+    .carousel-nav {
+      display: block;
 
-        .nav-button {
-          @extend %button;
-          z-index: 900;
-          top: 50%;
-          transform: translateY(-50%);
-          padding: 0;
-  
-          &.prev-slide {
-            margin-left: 1rem;
-            span {
-              float: left;
-            }
+      .nav-button {
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0;
+
+        span { position: relative; }
+
+        &.prev-slide {
+          margin-left: 1rem;
+          span {
+            float: left;
           }
-          &.next-slide {
-            margin-right: 3rem;
-            right: 0;
-            span {
-              float: right;
-            }
+        }
+        &.next-slide {
+          margin-right: 3rem;
+          right: 0;
+          span {
+            float: right;
           }
         }
       }
+    }
       
-      .carousel {
-        position: relative;
-        height: 100%;
-        width: fit-content;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        list-style: none;
-        transition-duration: 300ms;
-        transition-timing-function: ease-in-out;
-        will-change: transform;
-        
-        .slide {
-          padding-left: 1rem;
-          display: inline-block;
-  
-          img {
-            max-width: none;
-            height: 500px;
-            background-size: cover;
-          }
+    .carousel {
+      position: relative;
+      height: 100%;
+      width: fit-content;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      list-style: none;
+      transition-duration: 300ms;
+      transition-timing-function: ease-in-out;
+      will-change: transform;
+      
+      .slide {
+        padding-left: 1rem;
+        display: inline-block;
 
-          .exhibit-info {
-            font-size: 1em;
-            position: absolute;
-            margin: 0;
+        img {
+          max-width: none;
+          height: 500px;
+          background-size: cover;
+        }
 
-            .artist-name {
-              padding-top: 0.5rem;
-            }
+        .exhibit-info {
+          font-size: 1em;
+          position: absolute;
+          margin: 0;
+
+          .artist-name {
+            padding-top: 0.5rem;
           }
         }
       }
@@ -257,19 +234,15 @@ header {
           background-position: center;
         }
       }
-  
-      .display-selector {
-        width: 100%;
-      }
-  
+
       .display-collection {
-        white-space: nowrap;
         position: relative;
         height: 150px;
         width: fit-content;
-        padding: 0;
-        list-style: none;
         margin: 2rem auto 0;
+        padding: 0;
+        white-space: nowrap;
+        list-style: none;
   
         .display-item {
           display: inline-block;

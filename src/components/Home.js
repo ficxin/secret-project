@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from './Carousel';
-import { getFeaturedArtists } from '../utils/api'
-import { Link } from "react-router-dom";
+import { getFeaturedArtists } from '../utils/api';
 
 class Home extends Component {
   state = {
@@ -21,7 +20,7 @@ class Home extends Component {
     const { artists } = this.state
     return (
       <React.Fragment>
-        <Link to={'/'}><header>mirum moma</header></Link>
+        <header>mirum moca</header>
         <Carousel artists={artists} />
       </React.Fragment>
     );

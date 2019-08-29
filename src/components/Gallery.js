@@ -34,7 +34,7 @@ class Display extends Component {
         <header>{name}</header>
         <Link 
           to={'/'} 
-          className='back-button'>
+          className='nav-button back-home'>
             <span>&#9001;</span>
         </Link>
         <div className='display-wrapper'>
