@@ -21,8 +21,8 @@ class Carousel extends Component {
 
   componentDidUpdate(prevProp, prevState) {
     if (!prevState.positions) {
-      // Styles are not applied until current callstack is completed and delay is required to read correct styles.
-      setTimeout(() => this.getSlidePositions(), 100);
+      // Delayed required to read correct styles because styles are not set until image load completes.
+      setTimeout(() => this.getSlidePositions(), 200);
     }
   }
 
@@ -41,11 +41,10 @@ class Carousel extends Component {
     }))
   }
 
-  nextSlide = () => {
+  updateSlide = (direction) => {
     const { index: prev, positions, slides, disableClick } = this.state;
-    if (disableClick) return;
-
-    const index = (prev + 1) % slides.length;
+    if (disableClick || !positions) return;
+    const index = (prev + direction) % slides.length;
     const dist = -positions[index];
     const transition = { transform: `translateX(${dist}px)`,}
 
@@ -53,20 +52,6 @@ class Carousel extends Component {
       index,
       transition,
       disableClick: true,
-    }));
-  }
-
-  prevSlide = () => {
-    const { index: prev, positions, disableClick } = this.state;
-    if (disableClick) return;
-    const index = prev - 1;
-    const dist = -positions[index];
-
-    const transition = { transform: `translateX(${dist}px)`,}
-
-    this.setState(() => ({
-      index,
-      transition,
     }));
   }
 
@@ -95,17 +80,17 @@ class Carousel extends Component {
     return (
       <div className='carousel-wrapper'>
         <section className='carousel-container'>
-          <div className='carousel-nav'>
+          <div className='carousel-nav' >
             {index ?
               <button
                 className='nav-button prev-slide'
-                onClick={() => this.prevSlide()}>
+                onClick={() => this.updateSlide(-1)}>
                   <span>&#9001;</span>
               </button> 
             : null}
             <button
               className='nav-button next-slide'
-              onClick={() => this.nextSlide()}>
+              onClick={() => this.updateSlide(1)}>
                 <span>&#9002;</span>
             </button>
           </div>
