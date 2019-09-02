@@ -7,6 +7,7 @@ class Carousel extends Component {
     index: 0,
     transition: { transform: `translateX(0px)`},
     disableClick: false,
+    imagesLoaded: 0,
   }
 
   componentDidMount() {
@@ -19,10 +20,9 @@ class Carousel extends Component {
     }));
   }
 
-  componentDidUpdate(prevProp, prevState) {
-    if (!prevState.positions) {
-      // Delayed required to read correct styles because styles are not set until image load completes.
-      setTimeout(() => this.getSlidePositions(), 200);
+  componentDidUpdate({ artists }, prevState) {
+    if (prevState.imagesLoaded !== this.state.imagesLoaded && artists.length === this.state.imagesLoaded) {
+      this.getSlidePositions();
     }
   }
 
@@ -36,8 +36,8 @@ class Carousel extends Component {
     const positions =  Array.prototype.map.call(slides, slide => slide.offsetLeft);
 
     this.setState(() => ({
-      slides,
       positions,
+      slides,
     }))
   }
 
@@ -107,6 +107,7 @@ class Carousel extends Component {
                       className='thumbnail'
                       src={thumbnail_url}
                       alt={name}
+                      onLoad={() => this.setState(({ imagesLoaded }) => ({ imagesLoaded: ++imagesLoaded }))}
                     />
                   </Link>
                   <div className='exhibit-info'>
