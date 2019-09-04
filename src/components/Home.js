@@ -20,7 +20,7 @@ class Home extends Component {
     const { artists } = this.state
     return (
       <React.Fragment>
-        <header>mirum moca</header>
+        <header>ficxin moca</header>
         <Carousel artists={artists} />
       </React.Fragment>
     );

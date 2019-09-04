@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import Gallery from './Gallery';
+import PropTypes from 'prop-types';
 
 class Carousel extends Component {
+  static propTypes = {
+    artists: PropTypes.array.isRequired
+  }
+
   state = {
     index: 0,
     transition: { transform: `translateX(0px)`},

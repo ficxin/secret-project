@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import { Route, Link } from "react-router-dom";
-import { getArtistExhibit } from '../utils/api'
+import PropTypes from 'prop-types';
+import { getArtistExhibit } from '../utils/api';
 
 class Display extends Component {
+  static propTypes = {
+    match: PropTypes.object.isRequired
+  }
+
   state = {
     image_urls: [],
     artist_bio: '',
@@ -13,7 +18,7 @@ class Display extends Component {
     const { match } = this.props;
     const { image_urls, name }  = getArtistExhibit(match.params.id);
 
-    this.setState(() => ({ 
+    this.setState(() => ({
       image_urls,
       name,
     }));
