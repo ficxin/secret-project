@@ -17,11 +17,11 @@ const featuredArtist = [
   },
   { 
     name: 'Andy Dixon',
-    thumbnail: ['http://www.andydixon.net/content/1-work/5-how-much-do-they-cost/patronshome.jpg', 'Drawing Room'],
+    thumbnail: ['http://www.andydixon.net/content/1-work/2-no-big-deal-i-want-more-oti-hong-kong-2019/dixon-2019-07-02_001.jpg', 'Drawing Room'],
   },
   { 
     name: 'Christina Paik',
-    thumbnail: ['https://format-com-cld-res.cloudinary.com/image/private/s--TVkDXEDD--/c_limit,g_center,h_65535,w_2500/a_auto,fl_keep_iptc.progressive,q_95/58258-3410909-w11_you_cpaik.jpg?1501', 'You']
+    thumbnail: ['https://christinapaik.com/wp-content/uploads/2018/05/58258-3410909-w11_you_cpaik.jpg', 'You']
   },
   { 
     name: 'Sage Vaughn',
@@ -47,11 +47,11 @@ const artistExhibits = {
   andydixon: {
     name: 'Andy Dixon',
     image_urls: [
-      'http://www.andydixon.net/content/1-work/1-look-at-this-stuff-isn-t-it-neat-joshua-liner-new-york-2019/andydixon-christiesfiveprivatecollectionw.jpg',
-      'http://www.andydixon.net/content/1-work/1-look-at-this-stuff-isn-t-it-neat-joshua-liner-new-york-2019/andydixon-christiesgoldenagew.jpg',
-      'http://www.andydixon.net/content/1-work/1-look-at-this-stuff-isn-t-it-neat-joshua-liner-new-york-2019/andydixon-christiesfaringdonhousew.jpg',
-      'http://www.andydixon.net/content/1-work/2-alchemy-beers-london-2018/andydixon-patronshomebrooklyn2.jpg',
-      'http://www.andydixon.net/content/1-work/3-drawing-room/andydixon-sothebys.jpg'
+      'http://www.andydixon.net/content/1-work/2-no-big-deal-i-want-more-oti-hong-kong-2019/dixon-2019-07-02_001.jpg',
+      'http://www.andydixon.net/content/1-work/3-look-at-this-stuff-isn-t-it-neat-joshua-liner-new-york-2019/andydixon-christiesfiveprivatecollectionw.jpg',
+      'http://www.andydixon.net/content/1-work/2-no-big-deal-i-want-more-oti-hong-kong-2019/dixon-2019-07-02_004.jpg',
+      'http://www.andydixon.net/content/1-work/5-drawing-room/andydixon-christiesfaringdon.jpg',
+      'http://www.andydixon.net/content/1-work/1-we-open-on-andy-dixon-vain-egotistical-materialistic-unoriginal-sitting-in-a-hollywood-restaurant/andydixon-liz.jpg'
     ]
   },
   danielarsham: {
@@ -67,17 +67,18 @@ const artistExhibits = {
   christinapaik: {
     name: 'Christina Paik',
     image_urls: [
-      'https://format-com-cld-res.cloudinary.com/image/private/s--TVkDXEDD--/c_limit,g_center,h_65535,w_2500/a_auto,fl_keep_iptc.progressive,q_95/58258-3410909-w11_you_cpaik.jpg?1501',
-      'https://format-com-cld-res.cloudinary.com/image/private/s--4-paCtNv--/c_limit,g_center,h_65535,w_900/a_auto,fl_keep_iptc.progressive,q_95/fMecha20TO_cpaik_kds5tk.jpg?900',
-      'https://format-com-cld-res.cloudinary.com/image/private/s--VATX-kX3--/c_limit,g_center,h_65535,w_900/a_auto,fl_keep_iptc.progressive,q_95/58258-5591118-9403704526_436a4c981e_o.jpg?900',
-      'https://format-com-cld-res.cloudinary.com/image/private/s--wruTyFyl--/c_limit,g_center,h_65535,w_2500/a_auto,fl_keep_iptc.progressive,q_95/v1/1045ae486529e2671889d8c51cb42d1b/poggy01_cpaik2016.jpg?1700'
+      'https://christinapaik.com/wp-content/uploads/2018/05/58258-3410909-w11_you_cpaik.jpg',
+      'https://christinapaik.com/wp-content/uploads/2018/05/this.maybe_final01_cpaik2019.jpg',
+      'https://christinapaik.com/wp-content/uploads/2018/05/rilaFREE01_cpaik.jpg',
+      'https://christinapaik.com/wp-content/uploads/2018/05/MEUFS16_cpaik.jpg'
     ]
   },
   takashimurakami: {
     name: 'Takashi Murakami',
     image_urls: [
       'https://www.thebroad.org/sites/default/files/art/murakami_of_chinese_lions.jpg',
-      'https://cdn-5b7f4b74f911c80e08d29a54.closte.com/wp-content/uploads/2017/06/22727-to-be-determined22-2016-de-takashi-murakami-galerie-perrotin-photo-eric-simon.jpg',
+      'https://famous.nl/wp-content/uploads/2019/05/unnamed-15.jpg',
+      'https://gagosian.com/media/images/artists/takashi-murakami/Hq1IpCyVvc0x_2340x1316.jpg',
       'https://www.thebroad.org/sites/default/files/art/murakami_tan.jpg'
     ]
   },
@@ -86,8 +87,9 @@ const artistExhibits = {
     image_urls: [
       'https://i.pinimg.com/originals/ab/35/cf/ab35cf03c32e04ede4ce6be2ce341a2a.jpg',
       'https://artlogic-res.cloudinary.com/w_2000,h_2000,c_limit,f_auto,fl_lossy,q_auto:good,f_auto,fl_lossy,q_auto:good/artlogicstorage/lazinc/images/view/2bb0e43ab1328b363acb2c8ad73e1ca2j.jpg',
-      'http://partner.goodsmile.info/img/artist/1800_red-moon-.jpg',
+      'https://scontent-lax3-1.xx.fbcdn.net/v/t31.0-8/476353_10150799779122733_1199558542_o.jpg?_nc_cat=108&_nc_sid=2c4854&_nc_oc=AQnwz-tnd5yxY8Df-O7PPYKwWeF3SNroFMmR4FLv4Qj-GwrFsLo3A5aijRqGZfGY0jM&_nc_ht=scontent-lax3-1.xx&oh=646cb02b612ffd2b54a422bd207942ba&oe=5F278650',
       'http://arrestedmotion.com/wp-content/uploads/2010/01/am-david-choe-haitian-girl.jpg',
+      'https://scontent-lax3-2.xx.fbcdn.net/v/t31.0-8/326349_10150483430977733_1815481785_o.jpg?_nc_cat=111&_nc_sid=2c4854&_nc_oc=AQlB7ftwIP0iDvGtlEb2ehDJ1vBZ-W5VNbjSHPdkHdskDOmDIQUPvzY2Fv34I_DBl1E&_nc_ht=scontent-lax3-2.xx&oh=7e0387a4c7730f921c1166d2e88b922d&oe=5F26F6CF',
       'http://www.postersandprintsblog.com/storage/dave%20choe%20tokyo%20girl.jpg?__SQUARESPACE_CACHEVERSION=1291407894469'
     ]
   },
